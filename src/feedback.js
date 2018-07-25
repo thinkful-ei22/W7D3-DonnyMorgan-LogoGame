@@ -5,6 +5,7 @@ export default function Feedback(props){
     const currentGuess = props.currentGuess.toLowerCase();
     let displayMessage = '';
     let styles ={};
+    let display={};
 
     if(currentGuess === props.correctName.toLowerCase() ){
 
@@ -12,6 +13,9 @@ export default function Feedback(props){
         styles= {
             color: 'green',
             fontSize:'20px'
+        };
+        display={
+            display:'inline'
         }
     } else {
 
@@ -19,18 +23,24 @@ export default function Feedback(props){
         styles= {
             color: 'red',
             fontSize:'20px'
+        };
+        display={
+            display:'none'
         }
     }
 
     if(currentGuess === ""){
         displayMessage="";
+        display={
+            display:'none'
+        }
     }
 
 
     return(
         <div>
           <p style={styles}> {displayMessage}</p>
-          <button onClick={() => props.nextLogo()}>Next</button>
+          <button style={display} onClick={() => props.nextLogo()}>Next</button>
         </div>
     );
 

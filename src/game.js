@@ -38,13 +38,16 @@ export default class Game extends React.Component{
           currentGuess:'',
           currentScramble: scrambled
         }
-    }
+    } 
 
-       
+ 
 
     nextLogo = () => {
       //const logoData = this.props.logoData;
-      const randomLogo = logoData[Math.floor(Math.random() * logoData.length)];
+   
+  
+    
+      let randomLogo = logoData[Math.floor(Math.random() * logoData.length)];
 
       let word = randomLogo.name;
       const wordLength = word.length;
@@ -55,7 +58,7 @@ export default class Game extends React.Component{
           scrambled  += word.charAt(charIndex);
           word = word.substr(0,charIndex) + word.substr(charIndex +1);
       }
-
+      document.getElementById("guessForm").reset();
       console.log('randomLOGO.name', randomLogo.name);
       this.setState({
         currentLogo:{
@@ -65,6 +68,7 @@ export default class Game extends React.Component{
         currentGuess:'',
         currentScramble: scrambled
       });
+      
     }
 
 
