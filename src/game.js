@@ -38,14 +38,15 @@ export default class Game extends React.Component{
                name: randomLogo.name
            },
           currentGuess:'',
-          currentScramble: scrambled
+          currentScramble: scrambled,
+          randomNumberArr : []
         }
     } 
 
- 
 
     nextLogo = () => {
       //const logoData = this.props.logoData;
+      
         let randomLogo;
       do{ 
         randomLogo = logoData[Math.floor(Math.random() * logoData.length)];

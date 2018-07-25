@@ -9,7 +9,7 @@ export default function Feedback(props){
 
     if(currentGuess === props.correctName.toLowerCase() ){
 
-        displayMessage= 'Congratulations! You Won!';
+        displayMessage= 'Congratulations! You Won! 🍔';
         styles= {
             color: 'green',
             fontSize:'20px'
