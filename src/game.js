@@ -62,6 +62,7 @@ export default class Game extends React.Component{
           url: randomLogo.url,
           name: randomLogo.name
         },
+        currentGuess:'',
         currentScramble: scrambled
       });
     }
