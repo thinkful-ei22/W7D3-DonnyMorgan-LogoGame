@@ -22,6 +22,11 @@ export default function Feedback(props){
         }
     }
 
+    if(currentGuess === ""){
+        displayMessage="";
+    }
+
+
     return(
         <div>
           <p style={styles}> {displayMessage}</p>
