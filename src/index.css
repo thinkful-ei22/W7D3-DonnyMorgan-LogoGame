@@ -3,3 +3,33 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+
+.container{
+
+max-width:600px;
+margin:auto;
+padding:20px;
+text-align:center;
+
+}
+
+
+.logoImg{
+
+  width:100%;
+}
+
+.bigText{
+  font-size:50px;
+}
+
+input{
+  box-sizing : border-box;
+  width:100%;
+  padding:12px 20px;
+  font-size:25px;
+  border: 1px solid grey;
+  border-radius:10px;
+
+}

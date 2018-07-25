@@ -9,39 +9,52 @@ export default class Game extends React.Component{
     constructor(props){
         super(props);
 
+        //grabs random logo data object from json
+        const logoData = this.props.logoData;
+        const randomLogo = logoData[Math.floor(Math.random() * logoData.length)];
+        console.log("random Object" + Math.floor(Math.random() * logoData.length));
+
+        //generate scrambled word
+        const scrambler = function(){
+            let word = randomLogo.name;
+            const wordLength = word.length;
+            let scrambled = "";
+    
+            for (let i = 0; i < wordLength; i++){
+                let charIndex = Math.floor(Math.random()*word.length);
+                scrambled  += word.charAt(charIndex);
+                // console.log("let i" + i);
+                // console.log("charIndex"+charIndex);
+                // console.log('scrambled' +" "+ scrambled);
+                word = word.substr(0,charIndex) + word.substr(charIndex +1);
+            }
+    
+            return  scrambled;
+        }  
+
+        const scrambledWord = scrambler();
+
+        console.log('Our initial scrambled word' + scrambledWord);
+
+
         this.state={
            currentLogo:{
-               url: 'https://res.cloudinary.com/moodimagescloud/image/upload/v1532532364/Logos/1024px-React-icon.svg.png',
-               name: 'React'
+               url: randomLogo.url,
+               name: randomLogo.name
            },
           currentGuess:'',
-         // currentScramble: this.scrambler()
+          currentScramble: scrambledWord
         }
     }
 
-    // scrambler(){
-    //     let word = this.state.currentLogo.name;
-    //     const wordLength = word.length;
-    //     let scrambled = "";
-
-    //     for (let i = 0; i < wordLength; i++){
-    //         let charIndex = Math.floor(Math.random()*word.length);
-    //         scrambled  += word.charAt(charIndex);
-    //         console.log("let i" + i);
-    //         console.log("charIndex"+charIndex);
-    //         console.log('scrambled' +" "+ scrambled);
-    //         word = word.substr(0,charIndex) + word.substr(charIndex +1);
-    //     }
-
-    //     return  scrambled;
-    // }       
+       
 
    render(){
     return(
 
         <div className="container">
             <Logo currentLogo = {this.state.currentLogo}  />
-            <Scramble  currentLogo = {this.state.currentLogo} />
+            <Scramble  currentScramble = {this.state.currentScramble} />
             <Userinput handleGuess={currentGuess => this.setState({currentGuess})}/>
             <Feedback currentGuess={this.state.currentGuess} correctName={this.state.currentLogo.name}/>
             

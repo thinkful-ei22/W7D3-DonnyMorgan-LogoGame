@@ -5,7 +5,7 @@ export default function Userinput(props){
 
     return (
         <form>
-             <input type="text" onChange={e => props.handleGuess(e.target.value)}/>
+             <input type="text" onChange={e => props.handleGuess(e.target.value)} placeholder="Enter your guess..."/>
         </form>
 
 

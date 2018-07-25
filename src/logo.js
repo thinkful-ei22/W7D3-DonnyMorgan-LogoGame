@@ -5,7 +5,7 @@ export default function Logo(props){
     const logoUrl = props.currentLogo.url;
     return(
        
-        <img src={logoUrl} />
+        <img src={logoUrl} className="logoImg" />
 
     );
 }
