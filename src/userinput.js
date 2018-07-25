@@ -4,8 +4,12 @@ export default function Userinput(props){
 
 
     return (
-        <form>
-             <input type="text" onChange={e => props.handleGuess(e.target.value)} placeholder="Enter your guess..."/>
+        <form  onSubmit = {e => {  
+            e.preventDefault();
+           
+        }}>
+             <input onChange= {e => { props.handleGuess(e.target.value) }} type="text" placeholder="Enter your guess..."/>
+        
         </form>
 
 
