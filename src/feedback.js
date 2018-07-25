@@ -23,9 +23,10 @@ export default function Feedback(props){
     }
 
     return(
-
-            <p style={styles}> {displayMessage}</p>
-
+        <div>
+          <p style={styles}> {displayMessage}</p>
+          <button onClick={() => props.nextLogo()}>Next</button>
+        </div>
     );
 
 }
