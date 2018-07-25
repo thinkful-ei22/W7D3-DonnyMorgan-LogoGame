@@ -13,7 +13,9 @@ export default class Game extends React.Component{
 
         //grabs random logo data object from json
         //const logoData = this.props.logoData;
-        const randomLogo = logoData[Math.floor(Math.random() * logoData.length)];
+       const randomLogo = logoData[Math.floor(Math.random() * logoData.length)];
+
+
         console.log("random Object" + Math.floor(Math.random() * logoData.length));
 
         //generate scrambled word
@@ -44,10 +46,10 @@ export default class Game extends React.Component{
 
     nextLogo = () => {
       //const logoData = this.props.logoData;
-   
-  
-    
-      let randomLogo = logoData[Math.floor(Math.random() * logoData.length)];
+        let randomLogo;
+      do{ 
+        randomLogo = logoData[Math.floor(Math.random() * logoData.length)];
+       } while (randomLogo ===this.state.currentLogo );   
 
       let word = randomLogo.name;
       const wordLength = word.length;
