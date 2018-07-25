@@ -8,5 +8,20 @@
   }, {
     "url":"https://res.cloudinary.com/moodimagescloud/image/upload/v1532532364/Logos/584815fdcef1014c0b5e497a.png",
     "name": "PostgreSQL"
+  }, {
+    "url":"https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Firefox_Logo%2C_2017.svg/1200px-Firefox_Logo%2C_2017.svg.png",
+    "name": "Firefox"
+  }, {
+    "url":"https://i2.wp.com/contactohoy.com.mx/wp-content/uploads/2017/01/Apple.png?fit=1024%2C768&ssl=1",
+    "name": "Apple"
+  }, {
+    "url":"https://i2.wp.com/contactohoy.com.mx/wp-content/uploads/2017/01/Apple.png?fit=1024%2C768&ssl=1",
+    "name": "Apple"
+  }, {
+    "url":"https://software.uconn.edu/wp-content/uploads/sites/1721/2016/07/Adobe-logo-1.png",
+    "name": "Adobe"
+  }, {
+    "url":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/2000px-Bitcoin.svg.png",
+    "name": "Bitcoin"
   }
 ]
